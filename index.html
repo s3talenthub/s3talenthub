@@ -12,6 +12,8 @@
     .nav-link:hover { color: #eab308; }
     .section-header { position: relative; display: inline-block; }
     .section-header:after { content: ''; position: absolute; bottom: -8px; left: 0; width: 60px; height: 4px; background: #eab308; }
+    .form-container { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
+    .form-header { background: #18181b; padding: 1.5rem 2rem; border-bottom: 3px solid #eab308; }
   </style>
 </head>
 <body class="bg-zinc-950 text-white font-sans leading-relaxed">
@@ -52,9 +54,6 @@
            class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-lg px-10 py-4 rounded-xl transition">
           Get Started
         </a>
-      </div>
-      <div class="hidden md:block">
-        <!-- You can add a hero image here later -->
       </div>
     </div>
     <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-yellow-400 animate-bounce">
@@ -158,38 +157,62 @@
 
   <!-- Contact -->
   <section id="contact" class="py-24 bg-zinc-950">
-    <div class="max-w-5xl mx-auto px-6">
+    <div class="max-w-6xl mx-auto px-6">
       <h2 class="section-header text-4xl font-bold mb-10 text-yellow-400">Contact Us</h2>
       
       <div class="grid md:grid-cols-2 gap-16">
+        <!-- Contact Info -->
         <div>
           <p class="text-2xl mb-8">Let's discuss your hiring needs.</p>
-          <div class="space-y-6 text-lg">
-            <p><strong>📱 Shivraman Pillai</strong><br>
-               9363256509 (Call & WhatsApp Available)</p>
-            <p><strong>📧 Email:</strong><br>
-               s3talenthub@gmail.com</p>
+          <div class="space-y-8 text-lg">
+            <p>
+              <strong>📱 Shivraman Pillai</strong><br>
+              9363256509 (Call & WhatsApp Available)
+            </p>
+            <p>
+              <strong>📧 Email:</strong><br>
+              shivraman@s3talenthub.in
+            </p>
+            <p class="text-yellow-400 text-sm mt-8">
+              We usually respond within 24 hours.
+            </p>
           </div>
         </div>
 
-        <!-- Google Form Embed - REPLACE THIS -->
+        <!-- Improved Google Form -->
         <div>
-          <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" 
-                  width="100%" height="600" frameborder="0" class="bg-white rounded-2xl p-4">
-          </iframe>
+          <div class="form-container shadow-2xl">
+            <div class="form-header">
+              <h3 class="text-2xl font-semibold text-yellow-400 flex items-center gap-3">
+                <i class="fas fa-paper-plane"></i>
+                Submit Your Requirement
+              </h3>
+            </div>
+            <div class="p-6">
+              <iframe 
+                src="https://forms.gle/MsYbbAkd8z3HDreNA?embedded=true" 
+                width="100%" 
+                height="720" 
+                frameborder="0">
+              </iframe>
+            </div>
+          </div>
+          <p class="text-center text-gray-500 text-sm mt-4">
+            All information is kept confidential
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black py-8 text-center text-gray-500 text-sm">
+  <footer class="bg-black py-10 text-center text-gray-500 text-sm border-t border-yellow-400/10">
     © 2026 S3 Talent Hub | Smart Hiring Starts Here<br>
     All Rights Reserved
   </footer>
 
   <script>
-    // Smooth scrolling
+    // Smooth scrolling for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
